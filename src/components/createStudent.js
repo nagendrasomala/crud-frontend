@@ -10,7 +10,8 @@ function CreateStudent(){
 
     const handleSubmit = () =>{
         const data = {name:arr[0],email:arr[1],rollno:arr[2]};
-        Axios.post("http://localhost:4000/studentRoute/create-student",data)
+        //Axios.post("http://localhost:4000/studentRoute/create-student",data)
+        Axios.post("https://crud-deployment-backend-cztd.onrender.com/studentRoute/create-student",data)
         .then((res)=>{
             if(res.status===200){
                 alert("record added Successfully");
