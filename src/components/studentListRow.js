@@ -4,7 +4,8 @@ function StudentListRow(props){
     //const {_id,name,email,rollno} = props.obj // this method is called Object Destruction
 
     const handleClick = () =>{
-            axios.delete("http://localhost:4000/studentRoute/delete-student/"+props.obj._id)
+            //axios.delete("http://localhost:4000/studentRoute/delete-student/"+props.obj._id)
+            axios.delete("https://crud-deployment-backend-cztd.onrender.com/studentRoute/delete-student/"+props.obj._id)
             .then((res)=>{
                 if(res.status === 200){
                     alert("Record Deleted Successfully");

@@ -9,7 +9,8 @@ function EditStudent(){
     const [initialvalue,setInitialvalue] = useState({name:"",email:"",rollno:""});
     const [newData,setNewData] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:4000/studentRoute/update-student/"+id)
+        //axios.get("http://localhost:4000/studentRoute/update-student/"+id)
+        axios.get("https://crud-deployment-backend-cztd.onrender.com/studentRoute/update-student/"+id)
         .then((res)=>{
             if(res.status===200){
                 const {name,email,rollno} = res.data;
@@ -31,7 +32,8 @@ function EditStudent(){
 
     const handleSubmit =()=>{
         const data = {name:newData[0],email:newData[1],rollno:newData[2]}
-        axios.put("http://localhost:4000/studentRoute/update-student/"+id,data)
+        //axios.put("http://localhost:4000/studentRoute/update-student/"+id,data)
+        axios.put("https://crud-deployment-backend-cztd.onrender.com/studentRoute/update-student/"+id,data)
         .then((res)=>{
             if(res.status===200){
                 alert("Record Updated Successfully");
