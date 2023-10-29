@@ -1,7 +1,7 @@
 
 import './App.css';
 import { HashRouter,Routes,Route } from 'react-router-dom';
-import "C:/Users/NAGENDRABABU/MERN Internship/crudProject/frontend/node_modules/bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav';
 import CreateStudent from "./components/createStudent";
 import StudentList from "./components/studentList";
